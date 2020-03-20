@@ -2,8 +2,8 @@
 const express = require("express");
 
 //Import routes
-// const ProjectRouter =require("./projects/project-router");
-// const ResourceRouter=require("./resources/resource-router");
+const ProjectRouter =require("./projects/project-router");
+const ResourceRouter=require("./resources/resource-router");
 
 //Activate imports
 const server = express();
@@ -12,7 +12,7 @@ const server = express();
 server.use(express.json());
 
 //Declare server use routing
-// server.use("/api/projects", ProjectRouter);
-// server.use("/api/resource",ResourceRouter);
+server.use("/api/projects", ProjectRouter);
+server.use("/api/resource",ResourceRouter);
 
 module.exports = server;

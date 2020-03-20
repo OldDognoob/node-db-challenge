@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
