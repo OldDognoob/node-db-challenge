@@ -2,7 +2,10 @@ exports.up = function(knex) {
   return knex.schema
     .createTable("projects", table => {
       table.increments(); //increments(); plural
-      table.text("project_name", 128).notNullable();
+      table
+        .text("project_name", 128)
+        .unique()
+        .notNullable();
       table.text("project_description");
       table.boolean("complete").defaultTo(false);
     })
