@@ -14,6 +14,6 @@ server.use(express.json());
 
 //Declare server use routing
 server.use("/api/projects", ProjectRouter);
-server.use("/api/resource",ResourceRouter);
+server.use("/api/resources",ResourceRouter);//resources plural
 
 module.exports = server;

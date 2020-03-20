@@ -4,7 +4,7 @@ exports.up = function(knex) {
       table.increments(); //increments(); plural
       table
         .text("project_name", 128)
-        // .unique()
+        .unique()
         .notNullable();
       table.text("project_description");
       table.boolean("complete").defaultTo(false);
