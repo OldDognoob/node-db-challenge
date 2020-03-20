@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 //import database config
 const db = require("../data/dbConfig.js");
 

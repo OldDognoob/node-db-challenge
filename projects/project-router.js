@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require("express");
 
 const projects = require("./project-model");
@@ -10,7 +11,7 @@ router.get("/", (req, res) => {
     .then(projects => {
       res.status(200).json(projects);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "An error occur retrieving the projects"
       });
@@ -29,7 +30,7 @@ router.get("/:id", (req, res) => {
         });
       }
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "There was an error retrieving this project"
       });
@@ -42,7 +43,7 @@ router.post("/", (req, res) => {
     .then(project => {
       res.status(201).json(project);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "An error occur creating this project"
       });
@@ -55,7 +56,7 @@ router.get("/:id/tasks", (req, res) => {
     .then(tasks => {
       res.status(200).json(tasks);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "There was an error retrieving the tasks"
       });
@@ -69,7 +70,7 @@ router.post("/:id/tasks", (req, res) => {
     .then(task => {
       res.status(201).json(task);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "Error creating this task"
       });
@@ -82,7 +83,7 @@ router.get("/:id/resources", (req, res) => {
     .then(resources => {
       res.status(200).json(resources);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: " Error retrieving this projects resources"
       });

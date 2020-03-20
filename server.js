@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 //Import libraries
 const express = require("express");
 
