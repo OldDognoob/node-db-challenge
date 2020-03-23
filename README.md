@@ -39,12 +39,22 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+  
+   Rational databases is a kind of database, specially one which keeps the data organized into a particular kind of table.
+   SQL on the other hand is a language use to access and control Rational Databases, to set up database and modify them, as well as accessing them.
+   The difference is that Rational Database is not a language but a database. And SQL is a language and not database.
 
 - [ ] Why do tables need a `primary key`?
-
+ 
+     Primary Keys is a table column that serves a special purpose. Each database needs a primary key to ensure row-level accessibility. The values that a primary key compose are unique. Each table has one and only one primary key, which consist of one or more column.
+  
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+      Foreign Key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+    In order to create a many to many relationship between two tables(example Orders and Products table) we need to create a join table between them. In this table (like example Products_Order table), the primary key of the join table is the combination of the primary keys of the tables that we would like to join in a many to many relationship.
 
 ## Minimum Viable Product
 
